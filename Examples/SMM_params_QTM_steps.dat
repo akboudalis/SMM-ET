@@ -1,1 +1,29 @@
-
+200, % Ueff: In K
+80, % Linewidth of Ueff (in K).
+1, % Ueff distribution model: 1 = Gaussian. 2 = Lorentzian. 3 = Voigtian
+1e9, % bOrb: In s-1
+5, % n_Raman: Raman order
+1e-6, % b_Raman: in s-1 K^(-n_Raman)
+1e-2, % b_Direct: in s-1 K-1 T-4
+4, % m_Direct: exponent
+20, % b_QTM1: in s-1
+1e7, % b_QTM2: in T-2
+1, % Type of system: Kramers = 1. Non-Kramers = 0. This is ignored if a Sys structure has been given.
+0.2, % chiS/chiT
+0.4, % α distribution parameter
+0.8,50,200, % Start temperature, end temperature, and number of increment to plot τ (in K).
+3, % Number of frequencies for variable-temperature experiments
+11,111,1111, % frequency for calculation of vs T experiments (in Hz). Must be the length of the variable n_Freqs above.
+0.1, % Magnetic field for vs T experiments. Can only be a single value.
+0, 1, 200, % Start field, end field, number of increments to plot τ (in T).
+2, % Temperature for plotting τ vs H. Can only be a single value.
+-1, 3, 100, % Start frequency, end frequency, number of increments (logarithmically spaced). Frequencies are given as powers, e.g.: -1 = 0.1 Hz, 2 = 100 Hz etc. Vector of frequencies.
+3; % Number of temperatures for variable-frequency experiments
+2,3,4 % Temperatures for vs frequency simulations. Can have the length of the variable n_Temps above
+1.8, % Temperature to calculate hysteresis curve (in K).
+0.05, % Sweep rate for M vs H sweeps (in T s-1).
+2, % Number of level crossings
+1e-3,0.5, % Positions of level crossings (in T). Needs a small non-zero value for the zero-field crossing. Separate values by commas. Must correspond to the number defined at the previous line
+2, % Maximum sweep field (in T).
+150, % How many sweep points per branch?
+0, % Delay of magnetization measurement (in s)
