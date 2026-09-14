@@ -13,7 +13,7 @@ cm = 100*clight/1e6; % Conversion constant from cm-1 to MHz
 %% Input parameters
 % The text-file input allows the use of the same code for running different
 % simulations, with one text file for each.
-fname = 'SMM_params_v2_1.dat';
+fname = 'SMM_params.dat';
 line = 0;
 fid = fopen(fname); % Load parameter file
 Ueff =       textscan(fid, '%f',1, 'Delimiter', ',', 'Headerlines', line,'CommentStyle','%'); Ueff = cell2mat(Ueff);
